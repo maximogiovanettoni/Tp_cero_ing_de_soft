@@ -17,13 +17,20 @@ public class RulesTest {
     }
 
     @Test
+    public void rockDrawWithRock() {assertEquals(piedra, piedra.vs(piedra));}
+
+    @Test
     public void paperBeatsRock() {
         assertEquals(papel, papel.vs(piedra));
     }
+
     @Test
     public void paperLosesToScissors() {
         assertEquals(tijera, papel.vs(tijera));
     }
+
+    @Test
+    public void paperDrawWithPaper() {assertEquals(papel, papel.vs(papel));}
 
     @Test
     public void scissorsBeatsPaper() {
@@ -34,4 +41,7 @@ public class RulesTest {
     public void scissorsLosesToRock() {
         assertEquals(piedra, tijera.vs(piedra));
     }
+
+    @Test
+    public void scissorsDrawWithScissors() {assertEquals(tijera, tijera.vs(tijera));}
 }

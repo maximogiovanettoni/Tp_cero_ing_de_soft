@@ -8,4 +8,8 @@ public class Tijera {
     public Piedra vs(Piedra piedra) {
         return piedra;
     }
+
+    public Tijera vs(Tijera tijera) {
+        return tijera;
+    }
 }

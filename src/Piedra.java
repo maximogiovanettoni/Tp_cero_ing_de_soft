@@ -9,4 +9,8 @@ public class Piedra {
     public Papel vs(Papel papel) {
         return papel;
     }
+
+    public Piedra vs(Piedra piedra) {
+        return piedra;
+    }
 }

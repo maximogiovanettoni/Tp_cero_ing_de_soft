@@ -1,4 +1,5 @@
 public class Papel {
+
     public Papel() {}
 
     public Papel vs(Piedra piedra) {
@@ -8,5 +9,7 @@ public class Papel {
     public Tijera vs(Tijera tijera) {
         return tijera;
     }
+
+    public Papel vs(Papel papel) {return papel;}
 }
 
