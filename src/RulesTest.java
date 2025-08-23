@@ -8,30 +8,30 @@ public class RulesTest {
     Papel papel = new Papel();
     @Test
     public void rockBeatsScissors() {
-        assertEquals(piedra, piedra.rockvs(tijera));
+        assertEquals(piedra, piedra.vs(tijera));
     }
 
     @Test
     public void rockLosesToPaper() {
-        assertEquals(papel, piedra.rockvs(papel));
+        assertEquals(papel, piedra.vs(papel));
     }
 
     @Test
     public void paperBeatsRock() {
-        assertEquals(papel, papel.papervs(piedra));
+        assertEquals(papel, papel.vs(piedra));
     }
     @Test
     public void paperLosesToScissors() {
-        assertEquals(tijera, papel.papervs(tijera));
+        assertEquals(tijera, papel.vs(tijera));
     }
 
     @Test
     public void scissorsBeatsPaper() {
-        assertEquals(tijera, tijera.siccorsvs(papel));
+        assertEquals(tijera, tijera.vs(papel));
     }
 
     @Test
     public void scissorsLosesToRock() {
-        assertEquals(piedra, tijera.siccorsvs(piedra));
+        assertEquals(piedra, tijera.vs(piedra));
     }
 }

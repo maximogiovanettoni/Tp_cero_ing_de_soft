@@ -1,11 +1,11 @@
 public class Tijera {
     public Tijera() {}
 
-    public Tijera siccorsvs(Papel papel) {
+    public Tijera vs(Papel papel) {
         return this;
     }
 
-    public Piedra siccorsvs(Piedra piedra) {
+    public Piedra vs(Piedra piedra) {
         return piedra;
     }
 }
