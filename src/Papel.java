@@ -1,15 +1,21 @@
-public class Papel {
+public class Papel extends Shape {
 
     public Papel() {}
 
-    public Papel vs(Piedra piedra) {
+    @Override
+    public Shape vs(Shape shape) {
+        return shape.vs(this);
+    }
+
+    public Shape vs(Piedra piedra) {
         return this;
     }
 
-    public Tijera vs(Tijera tijera) {
+    public Shape vs(Tijera tijera) {
         return tijera;
     }
 
-    public Papel vs(Papel papel) {return papel;}
+    public Shape vs(Papel papel) {
+        return papel;
+    }
 }
-

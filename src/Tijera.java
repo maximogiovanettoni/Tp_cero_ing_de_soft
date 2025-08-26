@@ -1,15 +1,18 @@
-public class Tijera {
-    public Tijera() {}
-
-    public Tijera vs(Papel papel) {
-        return this;
+public class Tijera extends Shape {
+    @Override
+    public Shape vs(Shape shape) {
+        return shape.vs(this);
     }
 
-    public Piedra vs(Piedra piedra) {
-        return piedra;
+    public Shape vs(Piedra piedra) {
+        return piedra; // piedra gana
     }
 
-    public Tijera vs(Tijera tijera) {
-        return tijera;
+    public Shape vs(Papel papel) {
+        return this; // tijera gana
+    }
+
+    public Shape vs(Tijera tijera) {
+        return this; // empate
     }
 }
